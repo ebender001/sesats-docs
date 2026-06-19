@@ -935,11 +935,6 @@
         "type": "String",
         "required": false
       },
-      "acceptedBy": {
-        "type": "Pointer",
-        "targetClass": "UserInvitation",
-        "required": false
-      },
       "acceptedAt": {
         "type": "Date",
         "required": false
@@ -971,6 +966,11 @@
       },
       "notes": {
         "type": "String",
+        "required": false
+      },
+      "acceptedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
         "required": false
       }
     },
