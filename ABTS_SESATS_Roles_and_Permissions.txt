@@ -1,0 +1,73 @@
+ABTS_SESATS User Roles and Permissions
+Super Admin
+Can do:
+Manage all users
+Manage all institutions
+Manage specialties
+Assign roles
+Generate AI questions
+Approve questions
+Manage system settings
+View all reports
+Cannot do:
+No restrictions within the platform
+
+Administrator
+Can do:
+Invite users
+Manage users
+Assign roles (except super_admin)
+Manage questions
+View reports
+Cannot do:
+Cannot manage super_admin accounts
+Cannot modify system-wide security settings
+
+Editor
+Can do:
+Create questions
+Edit questions
+Upload media
+Save drafts
+Cannot do:
+Cannot approve questions
+Cannot assign roles
+
+Reviewer
+Can do:
+Review questions
+Approve questions
+Reject questions
+View edit history
+Cannot do:
+Cannot assign roles
+Cannot manage users
+
+AI Generator
+Can do:
+Generate AI draft questions
+Generate distractors
+Generate explanations
+Generate references
+Cannot do:
+Cannot approve questions
+Cannot publish content
+
+Institution Administrator
+Can do:
+Invite users within institution
+Manage institution users
+View institution reports
+Cannot do:
+Cannot manage users outside institution
+Cannot create global administrators
+
+Subscriber
+Can do:
+Access approved SESATS content
+Take quizzes
+Track progress
+Cannot do:
+Cannot edit content
+Cannot approve content
+Cannot manage users
