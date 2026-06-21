@@ -1,0 +1,128 @@
+name, specialtyObjectId
+ASD,K2xEIKdq8H
+AVR,1Wh1ZuY3Zi
+AVR,PDls3RKmfb
+Adult CHD,K2xEIKdq8H
+Adult Congenital,K2xEIKdq8H
+Advanced Cardiac Life Support,PDls3RKmfb
+Alcapa,K2xEIKdq8H
+Anatomy,1Wh1ZuY3Zi
+Antibiotics,PDls3RKmfb
+Anticoagulation,PDls3RKmfb
+Aorta,PDls3RKmfb
+Aorta,1Wh1ZuY3Zi
+Aorta,K2xEIKdq8H
+Aortic Aneurysm,PDls3RKmfb
+Arrhythmia,PDls3RKmfb
+Arrhythmia,1Wh1ZuY3Zi
+Arrhythmias,1Wh1ZuY3Zi
+Arterial Switch,K2xEIKdq8H
+Av Canal,K2xEIKdq8H
+Blood Transfusion,PDls3RKmfb
+CABG,PDls3RKmfb
+CABG,1Wh1ZuY3Zi
+CAD,1Wh1ZuY3Zi
+CAD + Mr + Tr,1Wh1ZuY3Zi
+CPB,1Wh1ZuY3Zi
+CPB,K2xEIKdq8H
+Cardiac Transplantation,K2xEIKdq8H
+Cardiac Transplantation,PDls3RKmfb
+Cardiac Transplantation,1Wh1ZuY3Zi
+Cardiac Tumor,1Wh1ZuY3Zi
+Cctga,K2xEIKdq8H
+Chest Wall,LXW4h6BMyk
+Coagulation,PDls3RKmfb
+Cor Triatriatum,K2xEIKdq8H
+Cp Bypass,K2xEIKdq8H
+Cp Bypass,PDls3RKmfb
+Cp Bypass,1Wh1ZuY3Zi
+Diaphragm,1Wh1ZuY3Zi
+Double Outlet Right Ventricle,K2xEIKdq8H
+Ebstein's Malformation,K2xEIKdq8H
+Endocarditis,1Wh1ZuY3Zi
+Endocarditis,PDls3RKmfb
+Esophagectomy,1Wh1ZuY3Zi
+Esophagus,PDls3RKmfb
+Esophagus,1Wh1ZuY3Zi
+Ethics,PDls3RKmfb
+Fontan,K2xEIKdq8H
+Fontan Circulation,K2xEIKdq8H
+Geriatrics,1Wh1ZuY3Zi
+Geriatrics,PDls3RKmfb
+Glucose Control,PDls3RKmfb
+HLHS,K2xEIKdq8H
+Hemodynamics,PDls3RKmfb
+Hit,PDls3RKmfb
+Hocm,K2xEIKdq8H
+Hypertrophic Cardiomyopathy,1Wh1ZuY3Zi
+Hypertrophic Cardiomyopathy,K2xEIKdq8H
+Hypoplastic Left Heart Syndrome,K2xEIKdq8H
+IABP,PDls3RKmfb
+LVAD,PDls3RKmfb
+Lobectomy,PDls3RKmfb
+Lung,PDls3RKmfb
+Lung,LXW4h6BMyk
+Lung Cancer,LXW4h6BMyk
+Lung Resection,LXW4h6BMyk
+Lung Resection,PDls3RKmfb
+Lung Resections,LXW4h6BMyk
+Lvoto,K2xEIKdq8H
+Lvoto Repair,K2xEIKdq8H
+MVR,1Wh1ZuY3Zi
+Massive Pulmonary Embolism,PDls3RKmfb
+Mechanical Ventilation,PDls3RKmfb
+Mediastinal Mass,LXW4h6BMyk
+Mediastinal Mass,1Wh1ZuY3Zi
+Mediastinoscopy,LXW4h6BMyk
+Mediastinum,1Wh1ZuY3Zi
+Mitral Stenosis,1Wh1ZuY3Zi
+Mitral Valve,1Wh1ZuY3Zi
+Mitral Valve Repair,1Wh1ZuY3Zi
+Mitral Valve Repair,PDls3RKmfb
+Myasthenia Gravis,PDls3RKmfb
+PAPVR,K2xEIKdq8H
+PDA,K2xEIKdq8H
+Pa Catheters,PDls3RKmfb
+Pa/ivs,K2xEIKdq8H
+Pacemaker,PDls3RKmfb
+Pacemakers,1Wh1ZuY3Zi
+Patient Safety,PDls3RKmfb
+Pericardium,LXW4h6BMyk
+Pericardium,1Wh1ZuY3Zi
+Perioperative Renal Failure,PDls3RKmfb
+Pharmacology,PDls3RKmfb
+Physiology,PDls3RKmfb
+Physiology,K2xEIKdq8H
+Pleura,LXW4h6BMyk
+Pneumonectomy,PDls3RKmfb
+Postoperative Bleeding,PDls3RKmfb
+Practice Guidelines,PDls3RKmfb
+Pulmonary Atresia With Intact Septum,K2xEIKdq8H
+Pulmonary Atresia With VSD,K2xEIKdq8H
+Pulmonary Embolism,1Wh1ZuY3Zi
+Pulmonary Hypertension,K2xEIKdq8H
+Pulmonary Rehabilitation,LXW4h6BMyk
+Refractory Shock,PDls3RKmfb
+Respiratory Failure,PDls3RKmfb
+Stress Ulceration,PDls3RKmfb
+Supravalvar Aortic Stenosis,K2xEIKdq8H
+TGA,K2xEIKdq8H
+TGA With Intact Ventricular Septum,K2xEIKdq8H
+TOF,K2xEIKdq8H
+Tapvc,K2xEIKdq8H
+Tetralogy Of Fallot,K2xEIKdq8H
+Total Artificial Heart,1Wh1ZuY3Zi
+Trachea,LXW4h6BMyk
+Transfusion,PDls3RKmfb
+Transplantation,K2xEIKdq8H
+Transplantation,PDls3RKmfb
+Trauma,LXW4h6BMyk
+Tricuspid Atresia,K2xEIKdq8H
+Tricuspid Regurgitation,1Wh1ZuY3Zi
+Tricuspid Valve,1Wh1ZuY3Zi
+Truncus Arteriosus,K2xEIKdq8H
+VSD,K2xEIKdq8H
+Vad,1Wh1ZuY3Zi
+Vad,PDls3RKmfb
+Vascular,1Wh1ZuY3Zi
+Vascular Ring,K2xEIKdq8H
