@@ -1,0 +1,1236 @@
+[
+  {
+    "className": "_User",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "username": {
+        "type": "String"
+      },
+      "password": {
+        "type": "String"
+      },
+      "email": {
+        "type": "String"
+      },
+      "emailVerified": {
+        "type": "Boolean"
+      },
+      "authData": {
+        "type": "Object"
+      },
+      "displayName": {
+        "type": "String",
+        "required": false
+      },
+      "credentials": {
+        "type": "String",
+        "required": false
+      },
+      "editorStatus": {
+        "type": "String",
+        "required": false
+      },
+      "lastActiveAt": {
+        "type": "Date",
+        "required": false
+      },
+      "profileCompleted": {
+        "type": "Boolean",
+        "required": false
+      },
+      "institution": {
+        "type": "Pointer",
+        "targetClass": "Institution",
+        "required": false
+      },
+      "primarySpecialty": {
+        "type": "Pointer",
+        "targetClass": "Specialty",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {
+        "*": true
+      },
+      "count": {
+        "*": true
+      },
+      "get": {
+        "*": true
+      },
+      "create": {
+        "*": true
+      },
+      "update": {
+        "*": true
+      },
+      "delete": {
+        "*": true
+      },
+      "addField": {
+        "*": true
+      },
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "username_1": {
+        "username": 1
+      },
+      "case_insensitive_username": {
+        "username": 1
+      },
+      "case_insensitive_email": {
+        "email": 1
+      },
+      "email_1": {
+        "email": 1
+      },
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "_Role",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "name": {
+        "type": "String"
+      },
+      "users": {
+        "type": "Relation",
+        "targetClass": "_User"
+      },
+      "roles": {
+        "type": "Relation",
+        "targetClass": "_Role"
+      }
+    },
+    "classLevelPermissions": {
+      "find": {
+        "*": true
+      },
+      "count": {
+        "*": true
+      },
+      "get": {
+        "*": true
+      },
+      "create": {
+        "*": true
+      },
+      "update": {
+        "*": true
+      },
+      "delete": {
+        "*": true
+      },
+      "addField": {
+        "*": true
+      },
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "name_1": {
+        "name": 1
+      },
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "Question",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "stem": {
+        "type": "String",
+        "required": false
+      },
+      "explanation": {
+        "type": "String",
+        "required": false
+      },
+      "critique": {
+        "type": "String",
+        "required": false
+      },
+      "difficulty": {
+        "type": "String",
+        "required": false
+      },
+      "specialty": {
+        "type": "String",
+        "required": false
+      },
+      "topic": {
+        "type": "String",
+        "required": false
+      },
+      "status": {
+        "type": "String",
+        "required": false
+      },
+      "generatedByAI": {
+        "type": "Boolean",
+        "required": false
+      },
+      "aiModel": {
+        "type": "String",
+        "required": false
+      },
+      "aiPromptVersion": {
+        "type": "String",
+        "required": false
+      },
+      "createdBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "approvedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "approvedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "lastEditedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "lastEditedAt": {
+        "type": "Date",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "QuestionOption",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
+        "required": false
+      },
+      "label": {
+        "type": "String",
+        "required": false
+      },
+      "text": {
+        "type": "String",
+        "required": false
+      },
+      "isCorrect": {
+        "type": "Boolean",
+        "required": false
+      },
+      "sortOrder": {
+        "type": "Number",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "QuestionMedia",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
+        "required": false
+      },
+      "mediaType": {
+        "type": "String",
+        "required": false
+      },
+      "storageProvider": {
+        "type": "String",
+        "required": false
+      },
+      "fileKey": {
+        "type": "String",
+        "required": false
+      },
+      "publicUrl": {
+        "type": "String",
+        "required": false
+      },
+      "caption": {
+        "type": "String",
+        "required": false
+      },
+      "altText": {
+        "type": "String",
+        "required": false
+      },
+      "placement": {
+        "type": "String",
+        "required": false
+      },
+      "sortOrder": {
+        "type": "Number",
+        "required": false
+      },
+      "uploadedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "uploadedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "status": {
+        "type": "String",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "QuestionReview",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "reviewer": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "decision": {
+        "type": "String",
+        "required": false
+      },
+      "comments": {
+        "type": "String",
+        "required": false
+      },
+      "reviewedAt": {
+        "type": "Date",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "QuestionEditHistory",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
+        "required": false
+      },
+      "editor": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "editedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "previousStatus": {
+        "type": "String",
+        "required": false
+      },
+      "newStatus": {
+        "type": "String",
+        "required": false
+      },
+      "changeSummary": {
+        "type": "String",
+        "required": false
+      },
+      "previousSnapshot": {
+        "type": "Object",
+        "required": false
+      },
+      "newSnapshot": {
+        "type": "Object",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "UserProgress",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "user": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
+        "required": false
+      },
+      "selectedOption": {
+        "type": "Pointer",
+        "targetClass": "QuestionOption",
+        "required": false
+      },
+      "isCorrect": {
+        "type": "Boolean",
+        "required": false
+      },
+      "answeredAt": {
+        "type": "Date",
+        "required": false
+      },
+      "timeSeconds": {
+        "type": "Number",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "AIGenerationJob",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "specialty": {
+        "type": "String",
+        "required": false
+      },
+      "topic": {
+        "type": "String",
+        "required": false
+      },
+      "promptVersion": {
+        "type": "String",
+        "required": false
+      },
+      "model": {
+        "type": "String",
+        "required": false
+      },
+      "status": {
+        "type": "String",
+        "required": false
+      },
+      "generatedQuestionCount": {
+        "type": "Number",
+        "required": false
+      },
+      "createdBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "Institution",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "name": {
+        "type": "String",
+        "required": false
+      },
+      "institutionType": {
+        "type": "String",
+        "required": false
+      },
+      "city": {
+        "type": "String",
+        "required": false
+      },
+      "stateProvince": {
+        "type": "String",
+        "required": false
+      },
+      "country": {
+        "type": "String",
+        "required": false
+      },
+      "website": {
+        "type": "String",
+        "required": false
+      },
+      "contactEmail": {
+        "type": "String",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "Specialty",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "name": {
+        "type": "String",
+        "required": false
+      },
+      "shortName": {
+        "type": "String",
+        "required": false
+      },
+      "description": {
+        "type": "String",
+        "required": false
+      },
+      "parentSpecialty": {
+        "type": "Pointer",
+        "targetClass": "Specialty",
+        "required": false
+      },
+      "sortOrder": {
+        "type": "Number",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "UserRoleAssignment",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "user": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "roleName": {
+        "type": "String",
+        "required": false
+      },
+      "institution": {
+        "type": "Pointer",
+        "targetClass": "Institution",
+        "required": false
+      },
+      "specialty": {
+        "type": "Pointer",
+        "targetClass": "Specialty",
+        "required": false
+      },
+      "assignedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "assignedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "_Session",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "user": {
+        "type": "Pointer",
+        "targetClass": "_User"
+      },
+      "installationId": {
+        "type": "String"
+      },
+      "sessionToken": {
+        "type": "String"
+      },
+      "expiresAt": {
+        "type": "Date"
+      },
+      "createdWith": {
+        "type": "Object"
+      }
+    },
+    "classLevelPermissions": {
+      "find": {
+        "*": true
+      },
+      "count": {
+        "*": true
+      },
+      "get": {
+        "*": true
+      },
+      "create": {
+        "*": true
+      },
+      "update": {
+        "*": true
+      },
+      "delete": {
+        "*": true
+      },
+      "addField": {
+        "*": true
+      },
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "UserInvitation",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "email": {
+        "type": "String",
+        "required": false
+      },
+      "displayName": {
+        "type": "String",
+        "required": false
+      },
+      "credentials": {
+        "type": "String",
+        "required": false
+      },
+      "institution": {
+        "type": "Pointer",
+        "targetClass": "Institution",
+        "required": false
+      },
+      "primarySpecialty": {
+        "type": "Pointer",
+        "targetClass": "Specialty",
+        "required": false
+      },
+      "roleName": {
+        "type": "String",
+        "required": false
+      },
+      "editorStatus": {
+        "type": "String",
+        "required": false
+      },
+      "invitedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "invitedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "tokenHash": {
+        "type": "String",
+        "required": false
+      },
+      "tokenExpiresAt": {
+        "type": "Date",
+        "required": false
+      },
+      "status": {
+        "type": "String",
+        "required": false
+      },
+      "acceptedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "invitationMessage": {
+        "type": "String",
+        "required": false
+      },
+      "emailSentAt": {
+        "type": "Date",
+        "required": false
+      },
+      "emailDeliveryStatus": {
+        "type": "String",
+        "required": false
+      },
+      "lastRemindedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "revokedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      },
+      "revokedAt": {
+        "type": "Date",
+        "required": false
+      },
+      "notes": {
+        "type": "String",
+        "required": false
+      },
+      "acceptedBy": {
+        "type": "Pointer",
+        "targetClass": "_User",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "Topic",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "name": {
+        "type": "String",
+        "required": false
+      },
+      "specialtyObjectId": {
+        "type": "String",
+        "required": false
+      },
+      "specialty": {
+        "type": "Pointer",
+        "targetClass": "Specialty",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
+      }
+    }
+  },
+  {
+    "className": "Reference",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "title": {
+        "type": "String",
+        "required": false
+      },
+      "authors": {
+        "type": "String",
+        "required": false
+      },
+      "journal": {
+        "type": "String",
+        "required": false
+      },
+      "volume": {
+        "type": "String",
+        "required": false
+      },
+      "issue": {
+        "type": "String",
+        "required": false
+      },
+      "pages": {
+        "type": "String",
+        "required": false
+      },
+      "doi": {
+        "type": "String",
+        "required": false
+      },
+      "pmid": {
+        "type": "String",
+        "required": false
+      },
+      "url": {
+        "type": "String",
+        "required": false
+      },
+      "citationText": {
+        "type": "String",
+        "required": false
+      },
+      "abstract": {
+        "type": "String",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      },
+      "year": {
+        "type": "Number",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "QuestionReference",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
+        "required": false
+      },
+      "reference": {
+        "type": "Pointer",
+        "targetClass": "Reference",
+        "required": false
+      },
+      "sortOrder": {
+        "type": "Number",
+        "required": false
+      },
+      "isPrimary": {
+        "type": "Boolean",
+        "required": false
+      },
+      "note": {
+        "type": "String",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  },
+  {
+    "className": "Status",
+    "fields": {
+      "objectId": {
+        "type": "String"
+      },
+      "createdAt": {
+        "type": "Date"
+      },
+      "updatedAt": {
+        "type": "Date"
+      },
+      "ACL": {
+        "type": "ACL"
+      },
+      "code": {
+        "type": "String",
+        "required": false
+      },
+      "name": {
+        "type": "String",
+        "required": false
+      },
+      "description": {
+        "type": "String",
+        "required": false
+      },
+      "sortOrder": {
+        "type": "Number",
+        "required": false
+      },
+      "isActive": {
+        "type": "Boolean",
+        "required": false
+      },
+      "isTerminal": {
+        "type": "Boolean",
+        "required": false
+      },
+      "color": {
+        "type": "String",
+        "required": false
+      }
+    },
+    "classLevelPermissions": {
+      "find": {},
+      "count": {},
+      "get": {},
+      "create": {},
+      "update": {},
+      "delete": {},
+      "addField": {},
+      "protectedFields": {
+        "*": []
+      }
+    }
+  }
+]

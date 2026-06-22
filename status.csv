@@ -1,0 +1,10 @@
+code,name,description,sortOrder,isActive,isTerminal,color
+DRAFT,Draft,Question is being authored and may be incomplete,10,true,false,#6B7280
+SUBMITTED,Submitted,Author has submitted question for editorial review,20,true,false,#3B82F6
+IN_REVIEW,In Review,Question is actively being reviewed by editor or reviewer,30,true,false,#F59E0B
+NEEDS_REVISION,Needs Revision,Reviewer has requested changes from author,40,true,false,#EF4444
+APPROVED,Approved,Question has passed review and is approved for publication,50,true,false,#10B981
+PUBLISHED,Published,Question is visible in the production question bank,60,true,false,#059669
+RETIRED,Retired,Question is no longer used but retained for historical purposes,70,true,true,#7C3AED
+ARCHIVED,Archived,Question has been archived and removed from active workflows,80,true,true,#4B5563
+REJECTED,Rejected,Question has been permanently declined and will not be published,90,true,true,#991B1B
