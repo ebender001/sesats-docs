@@ -406,11 +406,6 @@
       "ACL": {
         "type": "ACL"
       },
-      "question": {
-        "type": "Pointer",
-        "targetClass": "_User",
-        "required": false
-      },
       "reviewer": {
         "type": "Pointer",
         "targetClass": "_User",
@@ -426,6 +421,11 @@
       },
       "reviewedAt": {
         "type": "Date",
+        "required": false
+      },
+      "question": {
+        "type": "Pointer",
+        "targetClass": "Question",
         "required": false
       }
     },
@@ -1230,6 +1230,11 @@
       "addField": {},
       "protectedFields": {
         "*": []
+      }
+    },
+    "indexes": {
+      "_id_": {
+        "_id": 1
       }
     }
   }
