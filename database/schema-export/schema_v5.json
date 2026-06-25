@@ -247,6 +247,14 @@
       "lastEditedAt": {
         "type": "Date",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -296,6 +304,14 @@
       },
       "sortOrder": {
         "type": "Number",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -376,6 +392,14 @@
       "status": {
         "type": "String",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -426,6 +450,14 @@
       "question": {
         "type": "Pointer",
         "targetClass": "Question",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -490,6 +522,14 @@
       "newSnapshot": {
         "type": "Object",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -545,6 +585,14 @@
       },
       "timeSeconds": {
         "type": "Number",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -603,6 +651,14 @@
       "createdBy": {
         "type": "Pointer",
         "targetClass": "_User",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -665,6 +721,14 @@
       "isActive": {
         "type": "Boolean",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -723,6 +787,14 @@
       },
       "isActive": {
         "type": "Boolean",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -789,6 +861,14 @@
       },
       "isActive": {
         "type": "Boolean",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -977,6 +1057,14 @@
         "type": "Pointer",
         "targetClass": "_User",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -1023,6 +1111,14 @@
       "specialty": {
         "type": "Pointer",
         "targetClass": "Specialty",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
         "required": false
       }
     },
@@ -1110,6 +1206,14 @@
       "year": {
         "type": "Number",
         "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
+        "type": "String",
+        "required": false
       }
     },
     "classLevelPermissions": {
@@ -1159,6 +1263,14 @@
         "required": false
       },
       "note": {
+        "type": "String",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
         "type": "String",
         "required": false
       }
@@ -1216,6 +1328,14 @@
         "required": false
       },
       "color": {
+        "type": "String",
+        "required": false
+      },
+      "isSeedData": {
+        "type": "Boolean",
+        "required": false
+      },
+      "seedBatchId": {
         "type": "String",
         "required": false
       }
